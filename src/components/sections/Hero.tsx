@@ -6,7 +6,7 @@ import { hero } from "@/lib/content";
 export function Hero() {
   const hasVideo = fs.existsSync(path.join(process.cwd(), "public", hero.video));
   return (
-    <section className="relative flex min-h-[92vh] overflow-hidden bg-neutral-200 md:min-h-[88vh]">
+    <section className="relative flex min-h-[92vh] flex-col overflow-hidden bg-neutral-200 md:min-h-[88vh]">
       {/* Background: image (always visible) + video overlay when present + slow zoom */}
       <div className="absolute inset-0 z-0">
         <div
@@ -30,7 +30,7 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/25 to-transparent" />
       </div>
 
-      <div className="container-page relative z-10 flex w-full flex-col justify-between gap-5 pb-12 pt-6 sm:pb-16 sm:pt-10 md:pb-20 md:pt-14">
+      <div className="container-page relative z-10 flex w-full flex-1 flex-col justify-between gap-5 pb-8 pt-6 sm:pb-10 sm:pt-10 md:pb-14 md:pt-14">
         {/* Top corner: slogan only */}
         <div className="hero-enter">
           <h1 className="font-serif text-4xl font-normal uppercase leading-[0.98] tracking-tight text-neutral-900 sm:text-5xl lg:text-7xl">
@@ -51,35 +51,38 @@ export function Hero() {
             </p>
           </div>
 
-          {/* Card: badges + CTAs */}
-          <div className="flex w-full flex-col items-start gap-5 rounded-3xl bg-white/80 p-5 backdrop-blur-sm ring-1 ring-white/60 shadow-md sm:p-6 md:gap-6 md:bg-white/60">
-          <ul className="flex flex-wrap gap-2">
-            {hero.badges.map((badge) => (
-              <li
-                key={badge}
-                className="rounded-full border border-neutral-900/25 bg-white/80 px-4 py-1.5 font-mono text-[10px] font-medium uppercase tracking-[0.16em] text-neutral-800 backdrop-blur"
-              >
-                {badge}
-              </li>
-            ))}
-          </ul>
-
-          <div className="flex w-full flex-col gap-3 pt-1 sm:w-auto sm:flex-row md:pt-2">
+          {/* CTAs (clean over the image, no card) */}
+          <div className="flex w-full flex-col gap-3 pt-1 sm:w-auto sm:flex-row">
             <Link
               href={hero.primaryCta.href}
-              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-base font-semibold text-white transition hover:bg-neutral-800"
+              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-neutral-800"
             >
               {hero.primaryCta.label}
             </Link>
             <Link
               href={hero.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900/20 bg-white/80 px-8 py-3.5 text-base font-semibold text-neutral-900 backdrop-blur transition hover:border-neutral-900"
+              className="inline-flex items-center justify-center rounded-full border border-neutral-900/25 bg-white/85 px-8 py-3.5 text-base font-semibold text-neutral-900 shadow-md backdrop-blur transition hover:border-neutral-900 hover:bg-white"
             >
               {hero.secondaryCta.label}
             </Link>
           </div>
-          </div>
         </div>
+      </div>
+
+      {/* Full-width ribbon strip with the badges, dot-separated */}
+      <div className="relative z-10 w-full border-t border-neutral-900/10 bg-brand">
+        <ul className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 px-4 py-3 text-center font-mono text-[11px] font-semibold uppercase tracking-[0.18em] text-neutral-900 sm:gap-x-6 sm:text-xs">
+          {hero.badges.map((badge, i) => (
+            <li key={badge} className="flex items-center gap-x-4 sm:gap-x-6">
+              {i > 0 && (
+                <span aria-hidden className="text-neutral-900/40">
+                  &middot;
+                </span>
+              )}
+              {badge}
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
   );
