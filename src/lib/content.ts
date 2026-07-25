@@ -115,6 +115,59 @@ export const better = {
   ],
 };
 
+/* ------------------------------ Cómo lo hacemos ---------------------------- */
+
+export type HowStep = {
+  n: string;
+  title: string;
+  bullets: string[];
+  chips?: string[];
+};
+
+export const howItsMade: {
+  eyebrow: string;
+  title: string;
+  subtitle?: string;
+  steps: HowStep[];
+} = {
+  eyebrow: "Cómo lo hacemos",
+  title: "De ingredientes reales a barrita analizada",
+  subtitle:
+    "Sin humo: ingredientes que reconoces, fabricación en España y análisis independiente.",
+  steps: [
+    {
+      n: "01",
+      title: "Ingredientes reales",
+      bullets: [
+        "Dátiles, cacao, fibra de achicoria y aceite de oliva",
+        "Sin edulcorantes artificiales",
+        "Sin azúcares añadidos",
+      ],
+      chips: ["+ Proteína de grillo", "+ Proteína de guisante y arroz"],
+    },
+    {
+      n: "02",
+      title: "Fabricación en España",
+      bullets: [
+        "En SANAVI (Láchar, Granada), con registro sanitario",
+        "Lista de ingredientes corta y reconocible",
+        "Controles de seguridad alimentaria",
+      ],
+      chips: ["+ Nuevo alimento autorizado UE"],
+    },
+    {
+      n: "03",
+      title: "Análisis independiente",
+      bullets: [
+        "Cada fórmula se analiza en laboratorio (Mérieux NutriSciences)",
+        "Valores reales publicados en la ficha",
+        "Se reanaliza si cambia la receta",
+      ],
+      chips: ["+ Alto en proteína", "+ Alto en fibra", "+ Alto en hierro"],
+    },
+  ],
+};
+
 export type ProductFact = { label: string; value: string };
 export type ProductPack = { name: string; price?: string; note?: string; recommended?: boolean };
 

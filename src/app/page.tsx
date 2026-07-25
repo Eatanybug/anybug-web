@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/Hero";
 import { Cricket } from "@/components/sections/Cricket";
 import { Benefits } from "@/components/sections/Benefits";
 import { Better } from "@/components/sections/Better";
+import { HowItsMade } from "@/components/sections/HowItsMade";
 import { Products } from "@/components/sections/Products";
 import { NutritionStats } from "@/components/sections/NutritionStats";
 import { Faq } from "@/components/sections/Faq";
@@ -17,6 +18,7 @@ export default async function Home() {
       <Cricket />
       <Benefits />
       <Better />
+      <HowItsMade />
       <Products items={displayProducts} />
       <NutritionStats />
       <Faq />

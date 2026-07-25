@@ -7,6 +7,12 @@ import type { DisplayProduct } from "@/lib/products";
 import { allergenNotice } from "@/lib/content";
 import { useCart } from "@/components/cart/CartProvider";
 
+/** Extrae la cantidad de unidades del nombre del pack ("Pack prueba (3)" -> 3, "Pack 6" -> 6). */
+function packQuantity(name: string): number {
+  const match = name.match(/\d+/);
+  return match ? parseInt(match[0], 10) : 1;
+}
+
 export function ProductDetail({ product }: { product: DisplayProduct }) {
   const { addItem, loading, configured } = useCart();
   const isAvailable = product.status === "available";
@@ -14,6 +20,14 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
   const gallery = product.images?.length ? product.images : [product.image];
   const [index, setIndex] = useState(0);
   const details = product.details;
+  const packs = details?.packs ?? [];
+  const recommendedIndex = packs.findIndex((p) => p.recommended);
+  const [selectedPack, setSelectedPack] = useState(
+    recommendedIndex >= 0 ? recommendedIndex : 0
+  );
+  const selectedQuantity = packs.length
+    ? packQuantity(packs[selectedPack]?.name ?? "")
+    : 1;
 
   return (
     <div className="section">
@@ -124,31 +138,90 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
             </p>
           )}
 
-          {details?.packs && details.packs.length > 0 && (
-            <div className="flex flex-col gap-2 pt-1">
+          {packs.length > 0 && (
+            <div className="flex flex-col gap-3 pt-1">
               <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
-                Formatos disponibles
+                Elige tu formato
               </span>
-              <div className="flex flex-wrap gap-2">
-                {details.packs.map((pack) => (
-                  <span
-                    key={pack.name}
-                    className={`relative rounded-full border px-3 py-1.5 text-sm ${
-                      pack.recommended
-                        ? "border-brand bg-brand/10 text-neutral-900"
-                        : "border-neutral-900/15 bg-white text-neutral-800"
-                    }`}
-                  >
-                    <span className="font-semibold">{pack.name}</span>
-                    {pack.price && <span className="text-neutral-900"> - {pack.price}</span>}
-                    {pack.note && <span className="text-neutral-500"> - {pack.note}</span>}
-                    {pack.recommended && (
-                      <span className="ml-2 rounded-full bg-brand px-2 py-0.5 text-[10px] font-bold uppercase text-black">
-                        Recomendado
+              <div className="grid gap-3 sm:grid-cols-2">
+                {packs.map((pack, i) => {
+                  const selected = i === selectedPack;
+                  const perks = (pack.note ?? "")
+                    .split("·")
+                    .map((s) => s.trim())
+                    .filter(Boolean);
+                  return (
+                    <button
+                      key={pack.name}
+                      type="button"
+                      onClick={() => setSelectedPack(i)}
+                      aria-pressed={selected}
+                      className={`group relative flex flex-col gap-2 rounded-2xl border p-5 text-left transition duration-300 hover:-translate-y-0.5 hover:shadow-lg ${
+                        selected
+                          ? "border-brand bg-brand/5 ring-2 ring-brand"
+                          : "border-neutral-900/15 bg-white hover:border-neutral-400"
+                      }`}
+                    >
+                      {pack.recommended && (
+                        <span className="absolute right-4 top-4 rounded-full bg-brand px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-black">
+                          Recomendado
+                        </span>
+                      )}
+                      <span className="text-sm font-semibold uppercase tracking-wide text-neutral-900">
+                        {pack.name}
                       </span>
-                    )}
-                  </span>
-                ))}
+                      {pack.price && (
+                        <span className="font-serif text-3xl font-semibold text-neutral-900">
+                          {pack.price}
+                        </span>
+                      )}
+                      {perks.length > 0 && (
+                        <ul className="mt-1 flex flex-col gap-1.5">
+                          {perks.map((perk) => (
+                            <li
+                              key={perk}
+                              className="flex items-start gap-2 text-sm text-neutral-600"
+                            >
+                              <svg
+                                className="mt-0.5 h-4 w-4 flex-none text-brand"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="2.5"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                aria-hidden
+                              >
+                                <path d="M5 12h14M13 6l6 6-6 6" />
+                              </svg>
+                              <span>{perk}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      <span
+                        aria-hidden
+                        className={`mt-2 flex h-6 w-6 items-center justify-center rounded-full border transition ${
+                          selected
+                            ? "border-brand bg-brand text-black"
+                            : "border-neutral-300 text-transparent"
+                        }`}
+                      >
+                        <svg
+                          className="h-3.5 w-3.5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="M20 6 9 17l-5-5" />
+                        </svg>
+                      </span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -175,11 +248,17 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
           <div className="flex flex-col gap-3 pt-2 sm:flex-row">
             {canBuy ? (
               <button
-                onClick={() => addItem(product.variantId as string)}
+                onClick={() => addItem(product.variantId as string, selectedQuantity)}
                 disabled={loading}
                 className="group inline-flex items-center gap-3 rounded-full bg-black py-2 pl-6 pr-2 text-base font-semibold text-white shadow-lg transition hover:bg-neutral-800 disabled:opacity-60 sm:pl-8"
               >
-                <span>{loading ? "Añadiendo..." : "Añadir al carrito"}</span>
+                <span>
+                  {loading
+                    ? "Añadiendo..."
+                    : packs.length > 0
+                      ? `Añadir ${selectedQuantity} al carrito`
+                      : "Añadir al carrito"}
+                </span>
                 <span
                   aria-hidden
                   className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand text-black transition-transform duration-300 group-hover:scale-110"
