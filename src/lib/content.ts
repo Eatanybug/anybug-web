@@ -118,6 +118,13 @@ export const better = {
 export type ProductFact = { label: string; value: string };
 export type ProductPack = { name: string; price?: string; note?: string; recommended?: boolean };
 
+export type NutritionTable = {
+  title?: string;
+  columns: string[];
+  rows: { label: string; values: string[]; highlight?: boolean }[];
+  note?: string;
+};
+
 export type ProductDetails = {
   tagline?: string;
   highlights?: string[];
@@ -126,6 +133,10 @@ export type ProductDetails = {
   allergens?: string;
   /** Nota mientras no haya tabla nutricional validada. */
   nutritionNote?: string;
+  /** Tabla nutricional real (análisis de laboratorio). */
+  nutrition?: NutritionTable;
+  /** Línea de confianza: análisis de laboratorio independiente. */
+  labTested?: string;
   facts?: ProductFact[];
 };
 
@@ -165,11 +176,14 @@ export const products = {
       details: {
         tagline: "Energía limpia sin renunciar al sabor.",
         highlights: [
-          "Fuente de proteína de calidad",
-          "Sin azúcares añadidos",
+          "Alto en proteína — 9 g por barrita",
+          "Alto en fibra — 6,6 g por barrita",
+          "Alto en hierro — 31% VRN por barrita",
+          "Fuente de vitaminas del grupo B, incluida B12",
+          "Alto en zinc",
+          "Sin azúcares añadidos (solo los naturales de los dátiles)",
           "Ingredientes naturales, sin edulcorantes artificiales",
           "Proteína de origen sostenible (harina de grillo)",
-          "Ideal antes o después de entrenar, o como snack",
         ],
         packs: [
           { name: "Pack prueba (3)", price: "7,90 €", note: "2,63 €/ud · empieza aquí", recommended: true },
@@ -181,10 +195,34 @@ export const products = {
           "Dátiles, fibra vegetal (achicoria), Acheta domesticus (grillo doméstico) en polvo (10,4%), proteína de arroz, proteína de guisante, cacao, aceite de oliva virgen extra, concentrado de zumo de uva y almidón de arroz, extracto de cacao, aroma, hierro (fumarato ferroso), vitamina B3 (nicotinamida), vitamina B6 (clorhidrato de piridoxina), vitamina B2 (riboflavina), vitamina B1 (clorhidrato de tiamina).",
         allergens:
           "Puede causar reacciones alérgicas a personas con alergia conocida a crustáceos, moluscos y sus productos, o a los ácaros del polvo. Puede contener soja.",
-        nutritionNote:
-          "Tabla nutricional en proceso de analítica de laboratorio. La publicaremos aquí en cuanto esté validada.",
+        nutrition: {
+          title: "Información nutricional",
+          columns: ["", "Por 100 g", "Por barrita (39 g)"],
+          rows: [
+            { label: "Valor energético", values: ["1363 kJ / 325 kcal", "532 kJ / 127 kcal"] },
+            { label: "Grasas", values: ["7,7 g", "3,0 g"] },
+            { label: "de las cuales saturadas", values: ["1,8 g", "0,7 g"] },
+            { label: "Hidratos de carbono", values: ["34 g", "13,2 g"] },
+            { label: "de los cuales azúcares", values: ["25,5 g", "9,9 g"] },
+            { label: "Fibra alimentaria", values: ["17 g", "6,6 g"], highlight: true },
+            { label: "Proteínas", values: ["21,5 g", "8,4 g"], highlight: true },
+            { label: "Sal", values: ["0,33 g", "0,13 g"] },
+            { label: "Hierro", values: ["11 mg", "4,3 mg"], highlight: true },
+            { label: "Zinc", values: ["3,1 mg", "1,2 mg"] },
+            { label: "Magnesio", values: ["60 mg", "23,4 mg"] },
+            { label: "Vitamina B1 (tiamina)", values: ["0,61 mg", "0,24 mg"] },
+            { label: "Vitamina B2 (riboflavina)", values: ["0,94 mg", "0,37 mg"] },
+            { label: "Vitamina B3 (niacina)", values: ["10,2 mg", "4,0 mg"] },
+            { label: "Vitamina B6", values: ["1,0 mg", "0,39 mg"] },
+            { label: "Vitamina B12", values: ["1,2 µg", "0,47 µg"] },
+          ],
+          note:
+            "Valores medios obtenidos por análisis de laboratorio (Mérieux NutriSciences), julio 2026.\nPor barrita: Hierro 31%, B6 28%, B2 26%, B3 25%, B1 22%, B12 19% de los VRN.",
+        },
+        labTested:
+          "Analizado por laboratorio independiente (Mérieux NutriSciences), julio 2026.",
         facts: [
-          { label: "Peso neto", value: "38 g" },
+          { label: "Peso neto", value: "39 g" },
           { label: "Formato", value: "Barrita individual (flow-pack)" },
           { label: "Conservación", value: "Lugar fresco y seco, sin luz directa" },
           { label: "Consumo preferente", value: "8–10 meses" },
@@ -217,6 +255,12 @@ export const products = {
       status: "coming-soon",
     },
   ] as Flavor[],
+};
+
+export const nutritionHighlights = {
+  title: "Lo que dice el análisis",
+  items: ["Alto en proteína", "Alto en fibra", "Alto en hierro", "Con vitamina B12", "Alto en zinc"],
+  note: "Analizado por laboratorio independiente (Mérieux NutriSciences).",
 };
 
 export const testimonials = {
@@ -291,11 +335,21 @@ Con AnyBug eso no pasa — o al menos, no por la misma razón. Sin edulcorantes 
       q: "¿Las barras AnyBug contienen mucho azúcar?",
       a: `No llevamos azúcar añadido. Punto.
 
-Los azúcares que tiene la barrita vienen de los dátiles y el concentrado de zumo de uva — de ingredientes reales, no de una cucharada de sacarosa escondida en el fondo de la lista.
+El único dulce de la barrita viene de ingredientes reales — dátiles y concentrado de zumo de uva — no de azúcar refinado ni de una cucharada de sacarosa escondida en el fondo de la lista. Es dulzor de fruta, sin procesar.
 
-Muchas marcas te venden "sin azúcar añadido" y luego te meten maltitol, eritritol o jarabes que tu cuerpo procesa casi igual. Nosotros no jugamos a eso.
+Y ojo con el truco de moda: muchas marcas te venden "sin azúcar añadido" y luego te meten maltitol, eritritol o jarabes que tu cuerpo procesa casi igual. Nosotros no jugamos a eso: sin edulcorantes artificiales ni polioles raros.
 
-¿El resultado? Una barrita dulce de verdad, con macros que puedes enseñar sin vergüenza: proteína alta, calorías contenidas, azúcares totales controlados. Sin trucos de etiqueta.`,
+¿El resultado? Una barrita que sabe dulce de verdad, con el dulzor que pone la fruta y nada más. Sin trucos de etiqueta.`,
+    },
+    {
+      q: "¿Tenéis análisis nutricional? ¿Está avalado?",
+      a: `Sí, y no nos lo inventamos: CRUSH está analizada en un laboratorio independiente (Mérieux NutriSciences / Silliker). Los números que ves en la ficha salen de ahí, no de una estimación optimista.
+
+Por barrita (39 g): proteína alta, 6,6 g de fibra y 127 kcal, con el único azúcar procedente de la fruta (cero azúcar añadido).
+
+Y donde muchas barritas se quedan cortas, nosotros sumamos micronutrientes de verdad: 31% de los VRN de hierro por barrita, vitaminas del grupo B (incluida la B12) y zinc.
+
+Transparencia total: si algún día cambia la fórmula, se vuelve a analizar y se actualiza aquí. Sin letra pequeña.`,
     },
     {
       q: "¿Por qué proteína de grillo?",
@@ -424,7 +478,7 @@ export const about = {
     ],
   },
   stats: [
-    { value: "10 g", label: "Proteína por barrita" },
+    { value: "9 g", label: "Proteína por barrita" },
     { value: "0", label: "Azúcares añadidos" },
     { value: "100%", label: "Ingredientes naturales" },
     { value: "1", label: "Fuente de proteína más sostenible" },

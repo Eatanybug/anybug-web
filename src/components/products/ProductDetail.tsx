@@ -106,6 +106,24 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
             </ul>
           )}
 
+          {details?.labTested && (
+            <p className="flex items-center gap-1.5 text-xs text-neutral-500">
+              <svg
+                className="h-3.5 w-3.5 flex-none text-brand"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden
+              >
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+              <span>{details.labTested}</span>
+            </p>
+          )}
+
           {details?.packs && details.packs.length > 0 && (
             <div className="flex flex-col gap-2 pt-1">
               <span className="text-xs font-semibold uppercase tracking-wide text-neutral-500">
@@ -181,7 +199,7 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
           </div>
 
           {/* Detalle: ingredientes, nutrición y datos */}
-          {details && (details.ingredients || details.nutritionNote || details.facts) && (
+          {details && (details.ingredients || details.nutrition || details.nutritionNote || details.facts) && (
             <div className="mt-4 flex flex-col divide-y divide-neutral-200 border-t border-neutral-200">
               {details.ingredients && (
                 <section className="py-4">
@@ -193,12 +211,57 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
               )}
 
               <section className="py-4">
-                <h2 className="mb-1.5 text-sm font-bold uppercase tracking-wide text-neutral-900">
-                  Información nutricional
+                <h2 className="mb-3 text-sm font-bold uppercase tracking-wide text-neutral-900">
+                  {details.nutrition?.title || "Información nutricional"}
                 </h2>
-                <p className="text-sm leading-relaxed text-neutral-500">
-                  {details.nutritionNote || "Tabla nutricional disponible próximamente."}
-                </p>
+                {details.nutrition ? (
+                  <div className="flex flex-col gap-3">
+                    <div className="overflow-hidden rounded-xl ring-1 ring-neutral-200">
+                      <table className="w-full border-collapse text-sm">
+                        <thead>
+                          <tr className="bg-neutral-50 text-left">
+                            {details.nutrition.columns.map((col, i) => (
+                              <th
+                                key={i}
+                                className={`px-3 py-2 text-xs font-semibold uppercase tracking-wide text-neutral-500 ${
+                                  i === 0 ? "" : "text-right"
+                                }`}
+                              >
+                                {col}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-neutral-100">
+                          {details.nutrition.rows.map((row) => (
+                            <tr
+                              key={row.label}
+                              className={row.highlight ? "bg-brand/15 font-semibold text-neutral-900" : "text-neutral-700"}
+                            >
+                              <th scope="row" className="px-3 py-2 text-left font-[inherit]">
+                                {row.label}
+                              </th>
+                              {row.values.map((v, i) => (
+                                <td key={i} className="px-3 py-2 text-right tabular-nums">
+                                  {v}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                    {details.nutrition.note && (
+                      <p className="whitespace-pre-line text-xs leading-relaxed text-neutral-500">
+                        {details.nutrition.note}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <p className="text-sm leading-relaxed text-neutral-500">
+                    {details.nutritionNote || "Tabla nutricional disponible próximamente."}
+                  </p>
+                )}
               </section>
 
               {details.facts && details.facts.length > 0 && (
