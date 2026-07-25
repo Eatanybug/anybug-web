@@ -177,9 +177,27 @@ export function ProductDetail({ product }: { product: DisplayProduct }) {
               <button
                 onClick={() => addItem(product.variantId as string)}
                 disabled={loading}
-                className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-base font-semibold text-white transition hover:bg-neutral-800 disabled:opacity-60"
+                className="group inline-flex items-center gap-3 rounded-full bg-black py-2 pl-6 pr-2 text-base font-semibold text-white shadow-lg transition hover:bg-neutral-800 disabled:opacity-60 sm:pl-8"
               >
-                {loading ? "Añadiendo..." : "Añadir al carrito"}
+                <span>{loading ? "Añadiendo..." : "Añadir al carrito"}</span>
+                <span
+                  aria-hidden
+                  className="flex h-9 w-9 flex-none items-center justify-center rounded-full bg-brand text-black transition-transform duration-300 group-hover:scale-110"
+                >
+                  <svg
+                    className="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <path d="M5 6h16l-1.6 8.2a2 2 0 0 1-2 1.6H9a2 2 0 0 1-2-1.6L5 4H3" />
+                    <circle cx="9.5" cy="20" r="1.4" fill="currentColor" stroke="none" />
+                    <circle cx="17.5" cy="20" r="1.4" fill="currentColor" stroke="none" />
+                  </svg>
+                </span>
               </button>
             ) : isAvailable ? (
               <span className="inline-flex items-center justify-center rounded-full bg-brand px-8 py-3.5 text-base font-semibold text-black">

@@ -3,7 +3,7 @@ import { Cricket } from "@/components/sections/Cricket";
 import { Benefits } from "@/components/sections/Benefits";
 import { Better } from "@/components/sections/Better";
 import { Products } from "@/components/sections/Products";
-import { NutritionHighlights } from "@/components/sections/NutritionHighlights";
+import { NutritionStats } from "@/components/sections/NutritionStats";
 import { Faq } from "@/components/sections/Faq";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { getDisplayProducts } from "@/lib/products";
@@ -18,7 +18,7 @@ export default async function Home() {
       <Benefits />
       <Better />
       <Products items={displayProducts} />
-      <NutritionHighlights />
+      <NutritionStats />
       <Faq />
       <Newsletter />
     </>

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import { products as productsContent } from "@/lib/content";
 import type { DisplayProduct } from "@/lib/products";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CtaButton } from "@/components/ui/CtaButton";
 import { ProductCard } from "@/components/products/ProductCard";
 
 export type { DisplayProduct };
@@ -18,12 +18,9 @@ export function Products({ items }: { items: DisplayProduct[] }) {
           ))}
         </div>
 
-        <Link
-          href="/tienda"
-          className="rounded-full border border-neutral-900/20 px-6 py-3 text-sm font-semibold text-neutral-900 transition hover:border-neutral-900 hover:bg-neutral-900 hover:text-white"
-        >
+        <CtaButton href="/tienda" variant="secondary">
           Ver toda la tienda
-        </Link>
+        </CtaButton>
       </div>
     </section>
   );

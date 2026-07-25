@@ -53,6 +53,11 @@ export function Footer() {
           <span>{site.name}</span>
         </div>
       </div>
+
+      {/* Wordmark tipográfico gigante, guiño de marca al pie */}
+      <div className="overflow-hidden px-3 sm:px-6" aria-hidden>
+        <AnybugLogo className="block h-auto w-full text-brand/10" />
+      </div>
     </footer>
   );
 }

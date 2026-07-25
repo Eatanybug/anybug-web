@@ -257,9 +257,36 @@ export const products = {
   ] as Flavor[],
 };
 
-export const nutritionHighlights = {
+export type NutritionStat =
+  | {
+      animate: true;
+      /** Valor numérico final que se anima (0 → value). */
+      value: number;
+      /** Decimales a mostrar (usa coma decimal en la web). */
+      decimals: number;
+      /** Sufijo tras el número, p. ej. " g" o "%". */
+      suffix: string;
+      label: string;
+    }
+  | {
+      animate: false;
+      /** Valor no numérico (p. ej. "B12"), se muestra tal cual. */
+      display: string;
+      label: string;
+    };
+
+export const nutritionStats: {
+  title: string;
+  items: NutritionStat[];
+  note: string;
+} = {
   title: "Lo que dice el análisis",
-  items: ["Alto en proteína", "Alto en fibra", "Alto en hierro", "Con vitamina B12", "Alto en zinc"],
+  items: [
+    { animate: true, value: 9, decimals: 0, suffix: " g", label: "Proteína por barrita" },
+    { animate: true, value: 6.6, decimals: 1, suffix: " g", label: "Fibra por barrita" },
+    { animate: true, value: 31, decimals: 0, suffix: "%", label: "VRN de hierro por barrita" },
+    { animate: false, display: "B12", label: "Vitamina (de origen animal natural)" },
+  ],
   note: "Analizado por laboratorio independiente (Mérieux NutriSciences).",
 };
 

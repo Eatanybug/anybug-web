@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
-import Link from "next/link";
 import { hero } from "@/lib/content";
+import { CtaButton } from "@/components/ui/CtaButton";
 
 export function Hero() {
   const hasVideo = fs.existsSync(path.join(process.cwd(), "public", hero.video));
@@ -53,18 +53,12 @@ export function Hero() {
 
           {/* CTAs (clean over the image, no card) */}
           <div className="flex w-full flex-col gap-3 pt-1 sm:w-auto sm:flex-row">
-            <Link
-              href={hero.primaryCta.href}
-              className="inline-flex items-center justify-center rounded-full bg-black px-8 py-3.5 text-base font-semibold text-white shadow-lg transition hover:bg-neutral-800"
-            >
+            <CtaButton href={hero.primaryCta.href} variant="primary">
               {hero.primaryCta.label}
-            </Link>
-            <Link
-              href={hero.secondaryCta.href}
-              className="inline-flex items-center justify-center rounded-full border border-neutral-900/25 bg-white/85 px-8 py-3.5 text-base font-semibold text-neutral-900 shadow-md backdrop-blur transition hover:border-neutral-900 hover:bg-white"
-            >
+            </CtaButton>
+            <CtaButton href={hero.secondaryCta.href} variant="secondary">
               {hero.secondaryCta.label}
-            </Link>
+            </CtaButton>
           </div>
         </div>
       </div>

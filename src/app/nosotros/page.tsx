@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { about } from "@/lib/content";
+import { CtaButton } from "@/components/ui/CtaButton";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -119,12 +119,9 @@ export default function NosotrosPage() {
             {about.cta.title}
           </h2>
           <p className="max-w-xl text-neutral-300">{about.cta.text}</p>
-          <Link
-            href={about.cta.primary.href}
-            className="rounded-full bg-brand px-8 py-3.5 text-base font-semibold text-black transition hover:brightness-95"
-          >
+          <CtaButton href={about.cta.primary.href} variant="primary">
             {about.cta.primary.label}
-          </Link>
+          </CtaButton>
         </div>
       </section>
     </div>
