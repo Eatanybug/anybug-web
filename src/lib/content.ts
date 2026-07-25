@@ -276,7 +276,7 @@ export const testimonials = {
     },
     {
       quote:
-        "Por fin una barra de proteína que se siente ligera pero me mantiene satisfecha durante horas. Sin bajones de energía, sin culpa, solo combustible real.",
+        "Por fin una barrita de proteína que se siente ligera pero me mantiene satisfecha durante horas. Sin bajones de energía, sin culpa, solo combustible real.",
       name: "Lucas R.",
       role: "Corredor",
       result: "Mayor rendimiento y energía constante.",
@@ -298,7 +298,7 @@ export const faq = {
     "Las preguntas incómodas. Las respuestas directas. Sin rodeos, como nuestros productos.",
   items: [
     {
-      q: "¿Qué hace diferente a AnyBug de otras barras de proteína?",
+      q: "¿Qué hace diferente a AnyBug de otras barritas de proteína?",
       a: `Simple: nos posicionamos donde casi nadie se atreve.
 
 La mayoría elige: o barrita "natural" con poca proteína y macros flojos, o barrita hiperproteica llena de cosas que no reconoces en la etiqueta. Nosotros no.
@@ -332,7 +332,7 @@ Con AnyBug eso no pasa — o al menos, no por la misma razón. Sin edulcorantes 
 ¿Significa que a todo el mundo le sienta igual de bien? No — cada cuerpo es distinto. Pero si buscas una barrita que no te trate como un experimento de laboratorio, empiezas por leer la etiqueta. La nuestra no necesita un máster para entenderla.`,
     },
     {
-      q: "¿Las barras AnyBug contienen mucho azúcar?",
+      q: "¿Las barritas AnyBug contienen mucho azúcar?",
       a: `No llevamos azúcar añadido. Punto.
 
 El único dulce de la barrita viene de ingredientes reales — dátiles y concentrado de zumo de uva — no de azúcar refinado ni de una cucharada de sacarosa escondida en el fondo de la lista. Es dulzor de fruta, sin procesar.
