@@ -603,15 +603,63 @@ export const blog = {
     "Hablamos de proteína, sostenibilidad y de por qué el futuro de la comida es más raro (y mejor) de lo que crees.",
   posts: [
     {
-      slug: "por-que-proteina-de-grillo",
-      title: "Por qué proteína de grillo (y por qué no es tan raro)",
+      slug: "impacto-ambiental-proteina",
+      title: "El coste ambiental de la proteína: agua, tierra y CO₂ (con datos de la FAO)",
       excerpt:
-        "Menos agua, menos emisiones y un perfil de aminoácidos completo. Te contamos los datos sin postureo.",
-      date: "2026-01-15",
-      cover: "/products/crush.png",
+        "No toda la proteína pesa lo mismo en el planeta. Comparamos el grillo con la proteína animal, sin inventarnos las cifras.",
+      date: "2026-06-18",
+      cover: "/products/crush-lifestyle.jpeg",
       body: [
-        "(Edita este texto) La harina de grillo es una de las fuentes de proteína de menor impacto ambiental que existen.",
-        "(Edita este texto) Aquí desarrollamos el porqué, con datos de la FAO y la normativa europea.",
+        "Cuando hablamos de proteína solemos mirar solo la etiqueta nutricional, pero cada gramo que producimos tiene también una etiqueta ambiental: agua, tierra y emisiones. Y ahí es donde las diferencias entre fuentes se vuelven enormes. Producir proteína de origen animal, especialmente de vacuno, exige recursos que muchas veces damos por descontados.",
+        "Según la FAO, la cría de grillo utiliza mucha menos agua, requiere menos pienso para producir la misma cantidad de proteína y genera menos emisiones que la proteína bovina. No vamos a soltarte un porcentaje redondo que quede bonito en un cartel: preferimos decirte lo que de verdad sostiene la evidencia, que es una comparación cualitativa clara y a favor del insecto en las tres variables.",
+        "La razón es sencilla de entender. Un grillo es un animal pequeño, de sangre fría y ciclo de vida corto, así que aprovecha el alimento con muchísima más eficiencia que un rumiante. Convierte una parte mayor de lo que come en proteína aprovechable, ocupa menos espacio y no necesita las enormes extensiones de tierra y agua asociadas a la ganadería tradicional.",
+        "En CRUSH usamos harina de grillo (Acheta domesticus, el grillo doméstico) al 10,4%. No es una anécdota de marketing: es la pieza que nos permite ofrecer proteína de alta calidad con una huella menor. La proteína del futuro no tiene por qué ser un sacrificio de sabor ni de nutrientes; puede ser, sencillamente, una decisión más eficiente.",
+        "Ser honestos también significa reconocer los límites del dato. La sostenibilidad depende de muchos factores, desde el origen de los ingredientes hasta el transporte, y ninguna barrita va a salvar el planeta por sí sola. Pero elegir una fuente de proteína que, según la FAO, gasta menos agua, menos pienso y emite menos, es una de esas decisiones pequeñas que, sumadas, sí importan.",
+      ],
+    },
+    {
+      slug: "hierro-zinc-b12",
+      title: "Hierro, zinc y B12: los micronutrientes que casi nadie mira en un snack",
+      excerpt:
+        "Todos cuentan proteína, casi nadie mira los micronutrientes. Y ahí es donde un snack se vuelve interesante de verdad.",
+      date: "2026-05-20",
+      cover: "/products/crush-mood.jpeg",
+      body: [
+        "La conversación sobre snacks proteicos suele empezar y terminar en una sola cifra: los gramos de proteína. Es una lástima, porque lo que muchas veces marca la diferencia real en tu día no son esos gramos, sino los micronutrientes que acompañan a la comida. El hierro, el zinc y la vitamina B12 son tres de los que más solemos descuidar.",
+        "El hierro es clave para transportar oxígeno en la sangre y para no arrastrarte por la tarde; el zinc participa en el sistema inmunitario y en un montón de procesos metabólicos; y la B12 es fundamental para el sistema nervioso y para formar glóbulos rojos. El detalle interesante es que la B12 es difícil de obtener de fuentes vegetales, y el grillo la aporta de forma natural, igual que aporta hierro de manera notable.",
+        "Aquí es donde nos gusta enseñar los números que sí tenemos. En la analítica de laboratorio independiente de CRUSH, realizada por Mérieux NutriSciences, cada barrita aporta el 31% de los valores de referencia de nutrientes (VRN) de hierro, además de contener zinc y vitamina B12. Son datos medidos, no estimaciones de folleto.",
+        "Que un snack te dé casi un tercio de tu referencia diaria de hierro en una sola barrita no es lo habitual, y menos sin recurrir a fortificaciones raras. En CRUSH ese hierro y esa B12 vienen en buena parte del propio grillo, que los aporta de forma natural, sin necesidad de añadir una lista de vitaminas sintéticas para maquillar la etiqueta.",
+        "No te vamos a decir que una barrita sustituya a una dieta variada, porque no lo hace ni debería. Lo que sí puede hacer es ser una elección más inteligente cuando pica el hambre entre horas: en vez de un dulce vacío, un snack que suma proteína, fibra y micronutrientes que de verdad tu cuerpo utiliza.",
+      ],
+    },
+    {
+      slug: "fibra-en-barritas",
+      title: "Fibra: la gran olvidada de las barritas proteicas",
+      excerpt:
+        "Todo el mundo habla de proteína y nadie de fibra. Y en una barrita, la fibra es la diferencia entre un snack y un caramelo.",
+      date: "2026-04-12",
+      cover: "/products/crush-board.jpeg",
+      body: [
+        "Si miras el pasillo de las barritas proteicas, verás la palabra proteína repetida hasta el aburrimiento. Lo que casi nunca verás destacado es la fibra, y es un olvido curioso, porque la fibra es precisamente lo que separa a un snack que alimenta de uno que solo llena un hueco durante diez minutos.",
+        "La fibra ayuda a que la digestión sea más pausada, contribuye a la sensación de saciedad y alimenta a la microbiota intestinal, esas bacterias que cada vez más estudios relacionan con nuestro bienestar general. Una barrita alta en proteína pero sin fibra te deja con hambre otra vez enseguida; una con fibra de verdad acompaña mucho mejor.",
+        "En CRUSH parte de esa fibra viene de la achicoria, de la que se obtiene la inulina, una fibra vegetal que además aporta un toque de textura y dulzor sin necesidad de azúcares añadidos. Es un ingrediente real, reconocible, que cumple una función clara y no está ahí solo para engordar la lista.",
+        "Los números, otra vez sin inventar nada: la analítica de laboratorio independiente de CRUSH, hecha por Mérieux NutriSciences, confirma 6,6 g de fibra por barrita, lo que la sitúa como un producto alto en fibra. Junto a sus casi 9 g de proteína, esa combinación es la que hace que sacie de verdad y no sea un subidón de azúcar disfrazado.",
+        "La próxima vez que compares barritas, no te quedes solo en el gramaje de proteína. Baja un par de líneas y busca la fibra. Es un detalle pequeño en la etiqueta que dice mucho sobre si tienes delante comida pensada para nutrir o un dulce con buena campaña de marketing.",
+      ],
+    },
+    {
+      slug: "aminoacidos-esenciales",
+      title: "Proteína completa: qué son los aminoácidos esenciales (y por qué el grillo los tiene)",
+      excerpt:
+        "No toda la proteína es igual de aprovechable. Te explicamos qué es una proteína completa y por qué el grillo juega en esa liga.",
+      date: "2026-03-08",
+      cover: "/products/crush-bars.jpeg",
+      body: [
+        "Decir que un alimento tiene muchos gramos de proteína cuenta solo la mitad de la historia. La otra mitad es la calidad de esa proteína, y ahí entra un concepto que conviene entender: los aminoácidos esenciales. Son los ladrillos con los que tu cuerpo construye músculo, enzimas y defensas, y se llaman esenciales porque tu organismo no los fabrica y tienen que venir de la comida.",
+        "Una proteína se considera completa cuando aporta todos los aminoácidos esenciales en proporciones adecuadas. Muchas proteínas de origen vegetal son, por sí solas, incompletas: les falta o les escasea alguno. Un caso clásico es la lisina, un aminoácido que a varias fuentes vegetales les cuesta ofrecer en cantidad suficiente.",
+        "El grillo tiene aquí una ventaja notable: su perfil de aminoácidos es completo y aporta lisina de forma natural, algo que a las proteínas vegetales por sí solas les cuesta. Por eso la harina de grillo no es solo una fuente de proteína con menos huella ambiental, sino también una proteína de buena calidad biológica.",
+        "En CRUSH no dependemos de una sola fuente, y eso es a propósito. Combinamos harina de grillo con proteína de guisante y proteína de arroz, tres perfiles que se complementan entre sí. Donde una fuente flojea, otra aporta, y el resultado es un conjunto de aminoácidos más equilibrado que el que darían por separado.",
+        "La lección práctica es sencilla: cuando elijas una proteína, no mires solo el número grande de la etiqueta, piensa también de dónde viene y si está bien acompañada. Una combinación inteligente de fuentes suele valer más que una cifra alta de una proteína pobre en aminoácidos esenciales.",
       ],
     },
     {
@@ -622,8 +670,28 @@ export const blog = {
       date: "2026-02-02",
       cover: "/products/crush-bar.png",
       body: [
-        "(Edita este texto) No todo lo que dice 'natural' lo es.",
-        "(Edita este texto) Te enseñamos qué mirar primero en la lista de ingredientes.",
+        "La parte de delante de un envase es publicidad; la de detrás es la verdad. Si quieres saber qué estás comiendo de verdad, dale la vuelta a la barrita y lee la lista de ingredientes y la información nutricional. Con dos o tres reglas sencillas dejarás de tragarte medio marketing del pasillo.",
+        "Primer truco: el orden de los ingredientes no es casual. Se listan de mayor a menor cantidad, así que si lo primero que aparece es un jarabe, un azúcar o un aceite refinado, ya sabes de qué está hecho el grueso del producto por mucho que la parte delantera grite proteína. Fíjate también en la longitud de la lista: cuanto más corta y reconocible, mejor suele ser la señal.",
+        "Segundo truco: cuidado con los polioles. El maltitol y otros edulcorantes de este tipo permiten poner en grande un llamativo sin azúcar, pero aportan calorías, pueden sentar mal al estómago y son un clásico para maquillar un producto que, por lo demás, es puro relleno. El sello sin azúcares añadidos también es tramposo cuando el producto lleva jarabes o concentrados que, en la práctica, endulzan igual.",
+        "Tercer truco: distingue proteína real de relleno. Un número alto de proteína no significa nada si viene acompañado de una lista interminable de aditivos, fibras sintéticas y aromas para tapar el sabor. Comprueba de dónde sale esa proteína y qué la acompaña, porque ahí está la diferencia entre comida y un producto de laboratorio con buena portada.",
+        "En AnyBug hacemos justo lo contrario de esconder. La etiqueta de CRUSH es corta y reconocible: dátiles, cacao, fibra vegetal de achicoria, proteína de arroz, proteína de guisante, harina de grillo, aceite de oliva virgen extra y concentrado de zumo de uva. Sin edulcorantes artificiales y sin azúcares añadidos, porque el dulzor viene de la fruta.",
+        "Aprender a leer etiquetas es la mejor defensa que tienes como consumidor, y lo mejor es que no cuesta nada. La próxima vez que dudes entre dos barritas, ignora el eslogan de delante, gírala y deja que la lista de ingredientes hable. Si es corta, clara y entiendes lo que pone, vas por buen camino.",
+      ],
+    },
+    {
+      slug: "por-que-proteina-de-grillo",
+      title: "Por qué proteína de grillo (y por qué no es tan raro)",
+      excerpt:
+        "Menos agua, menos emisiones y un perfil de aminoácidos completo. Te contamos los datos sin postureo.",
+      date: "2026-01-15",
+      cover: "/products/crush.png",
+      body: [
+        "Sí, lo primero que piensas es en la cara rara. Lo entendemos. Pero antes de descartarlo, deja que te contemos por qué la proteína de grillo tiene mucho más sentido de lo que parece, y por qué en gran parte del mundo comer insectos es de lo más normal. El bicho raro, si acaso, es el prejuicio.",
+        "Empecemos por el planeta. Según la FAO, la cría de grillo utiliza mucha menos agua, requiere menos pienso y genera menos emisiones que la proteína de vacuno. Es un animal pequeño y muy eficiente convirtiendo lo que come en proteína aprovechable, así que su huella ambiental es sensiblemente menor sin que tengamos que inflar la cifra para impresionarte.",
+        "Y no es solo cuestión de sostenibilidad: nutricionalmente es una proteína de primera. El grillo tiene un perfil de aminoácidos completo y aporta de forma natural lisina, hierro y vitamina B12, tres cosas que a las proteínas vegetales por sí solas les cuesta ofrecer. Es proteína de calidad, no un simple relleno con buena historia detrás.",
+        "También está la duda legal, que es totalmente razonable. La harina de grillo procede de Acheta domesticus, el grillo doméstico, y está autorizada en la Unión Europea como nuevo alimento (Novel Food) tras la evaluación de la EFSA, recogida en el Reglamento UE 2023/5. Dicho de otro modo: no es un experimento clandestino, es un ingrediente evaluado y aprobado.",
+        "La pregunta del millón: ¿se nota? La respuesta sincera es que no. En CRUSH la harina de grillo está al 10,4% y se integra con dátiles, cacao y el resto de ingredientes, así que lo que saboreas es una barrita de chocolate rica, no un grillo. La idea da más respeto que el sabor, te lo aseguramos.",
+        "Elegir proteína de grillo no es hacerse el valiente ni seguir una moda: es escoger una fuente eficiente, completa y perfectamente legal, con la que además comes rico. Si has llegado hasta aquí, ya has hecho la parte difícil, que es cuestionarte el prejuicio. Lo demás es darle un mordisco.",
       ],
     },
   ] as BlogPost[],

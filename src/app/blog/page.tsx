@@ -61,7 +61,7 @@ export default function BlogPage() {
                 </h2>
                 <p className="flex-1 text-sm text-neutral-500">{post.excerpt}</p>
                 <span className="mt-2 text-sm font-semibold text-neutral-900 transition group-hover:text-brand">
-                  Leer más ?
+                  Leer más →
                 </span>
               </div>
             </Link>

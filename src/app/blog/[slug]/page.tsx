@@ -44,7 +44,7 @@ export default async function BlogPostPage({
     <article className="section bg-white">
       <div className="container-page mx-auto flex max-w-3xl flex-col gap-6">
         <Link href="/blog" className="text-sm text-neutral-500 transition hover:text-neutral-900">
-          ? Volver al blog
+          ← Volver al blog
         </Link>
 
         <span className="text-xs font-medium uppercase tracking-wide text-neutral-400">
