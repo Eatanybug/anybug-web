@@ -499,9 +499,17 @@ export const footer = {
   ],
   legal: `© ${new Date().getFullYear()} AnyBug. Todos los derechos reservados.`,
   social: [
-    { label: "Instagram", href: "https://instagram.com/eatanybug" },
+    { label: "Instagram", href: "https://www.instagram.com/eatanybug" },
     { label: "TikTok", href: "https://tiktok.com/@eatanybug" },
   ],
+  contact: {
+    title: "Contacto",
+    email: "sara@eatanybug.com",
+    phone: "694 270 709",
+    phoneHref: "+34694270709",
+    instagram: "@eatanybug",
+    instagramHref: "https://www.instagram.com/eatanybug",
+  },
 };
 
 /** Sección de newsletter (captación de email). */

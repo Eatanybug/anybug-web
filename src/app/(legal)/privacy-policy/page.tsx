@@ -43,6 +43,12 @@ export default function PrivacyPolicy() {
                 sara@eatanybug.com
               </a>
             </li>
+            <li>
+              Teléfono:{" "}
+              <a className="underline" href="tel:+34694270709">
+                694 270 709
+              </a>
+            </li>
             <li>Sitio web: www.eatanybug.com</li>
           </ul>
         </section>

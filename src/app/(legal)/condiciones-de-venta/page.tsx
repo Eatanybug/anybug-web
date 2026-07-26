@@ -32,6 +32,12 @@ export default function CondicionesDeVenta() {
                 sara@eatanybug.com
               </a>
             </li>
+            <li>
+              Teléfono:{" "}
+              <a className="underline" href="tel:+34694270709">
+                694 270 709
+              </a>
+            </li>
           </ul>
           <p className="mt-2">
             Las presentes condiciones regulan la compraventa de productos a

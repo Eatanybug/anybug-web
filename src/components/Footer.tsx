@@ -5,7 +5,7 @@ import { AnybugLogo } from "@/components/AnybugLogo";
 export function Footer() {
   return (
     <footer className="mt-auto bg-black text-neutral-300">
-      <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_repeat(3,1fr)]">
+      <div className="container-page grid gap-10 py-14 md:grid-cols-[1.4fr_repeat(4,1fr)]">
         <div>
           <AnybugLogo className="h-8 w-auto text-white" />
           <p className="mt-4 max-w-xs text-sm text-neutral-400">{footer.tagline}</p>
@@ -45,6 +45,42 @@ export function Footer() {
             </ul>
           </div>
         ))}
+
+        {footer.contact && (
+          <div>
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-wide text-white">
+              {footer.contact.title}
+            </h3>
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href={`mailto:${footer.contact.email}`}
+                  className="text-sm text-neutral-400 transition hover:text-white"
+                >
+                  {footer.contact.email}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`tel:${footer.contact.phoneHref}`}
+                  className="text-sm text-neutral-400 transition hover:text-white"
+                >
+                  {footer.contact.phone}
+                </a>
+              </li>
+              <li>
+                <a
+                  href={footer.contact.instagramHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-neutral-400 transition hover:text-white"
+                >
+                  Instagram {footer.contact.instagram}
+                </a>
+              </li>
+            </ul>
+          </div>
+        )}
       </div>
 
       <div className="border-t border-white/10">
