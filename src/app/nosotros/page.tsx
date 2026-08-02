@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { about } from "@/lib/content";
+import { renderInline } from "@/lib/richText";
 import { CtaButton } from "@/components/ui/CtaButton";
 import { LifestyleBand } from "@/components/sections/LifestyleBand";
 
@@ -34,7 +35,7 @@ export default function NosotrosPage() {
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
               {about.story.title}
             </h2>
-            <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
+            <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] mx-auto lg:mx-0 overflow-hidden rounded-2xl">
               <Image
                 src="/lifestyle/lifestyle-tote.png"
                 alt="Barrita AnyBug en un tote bag de pádel"
@@ -46,8 +47,8 @@ export default function NosotrosPage() {
           </div>
           <div className="flex flex-col gap-4">
             {about.story.paragraphs.map((p, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-600">
-                {p}
+              <p key={i} className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+                {renderInline(p, `story-${i}`)}
               </p>
             ))}
           </div>
@@ -56,27 +57,29 @@ export default function NosotrosPage() {
 
       {/* Quién está detrás */}
       <section className="section bg-cream">
-        <div className="container-page grid items-center gap-8 lg:grid-cols-[1.3fr_0.9fr]">
-          <div className="flex flex-col gap-4">
-            <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-              {about.founder.title}
-            </h2>
-            {about.founder.paragraphs.map((p, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-600">
-                {p}
-              </p>
-            ))}
-          </div>
-          <div className="flex justify-center lg:justify-end">
-            <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
-              <Image
-                src="/lifestyle/anybug-founder-gym.png"
-                alt="Fundadora de AnyBug con una barrita en el gimnasio"
-                fill
-                className="object-cover"
-                sizes="280px"
-              />
-              <div className="pointer-events-none absolute inset-0 z-[3] bg-cream/45" />
+        <div className="container-page flex flex-col gap-6">
+          <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+            {about.founder.title}
+          </h2>
+          <div className="grid items-center gap-8 lg:grid-cols-[1.3fr_0.9fr]">
+            <div className="order-2 flex flex-col gap-4 lg:order-1">
+              {about.founder.paragraphs.map((p, i) => (
+                <p key={i} className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+                  {renderInline(p, `founder-${i}`)}
+                </p>
+              ))}
+            </div>
+            <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
+              <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
+                <Image
+                  src="/lifestyle/anybug-founder-gym.png"
+                  alt="Fundadora de AnyBug con una barrita en el gimnasio"
+                  fill
+                  className="object-cover"
+                  sizes="280px"
+                />
+                <div className="pointer-events-none absolute inset-0 z-[3] bg-cream/45" />
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +92,7 @@ export default function NosotrosPage() {
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
               {about.making.title}
             </h2>
-            <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
+            <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] mx-auto lg:mx-0 overflow-hidden rounded-2xl">
               <Image
                 src="/lifestyle/lifestyle-bag.png"
                 alt="Barrita AnyBug en un tote con pelotas de pádel"
@@ -101,8 +104,8 @@ export default function NosotrosPage() {
           </div>
           <div className="flex flex-col gap-4">
             {about.making.paragraphs.map((p, i) => (
-              <p key={i} className="text-base leading-relaxed text-neutral-600">
-                {p}
+              <p key={i} className="text-base leading-relaxed text-neutral-600 sm:text-lg">
+                {renderInline(p, `making-${i}`)}
               </p>
             ))}
           </div>

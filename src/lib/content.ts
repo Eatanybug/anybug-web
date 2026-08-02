@@ -546,9 +546,9 @@ export const about = {
     title: "Por qué existimos",
     paragraphs: [
       "AnyBug empezó por hartazgo. Nos cansamos de un pasillo lleno de promesas y de elegir siempre entre lo mismo: o una barrita 'natural' con proteína de adorno y macros flojos, o una hiperproteica cargada de edulcorantes, jarabes raros y una lista de ingredientes imposible de pronunciar.",
-      "Nos parecía absurdo tener que renunciar a una cosa para tener la otra: o comes rico, o comes bien. Así que nos pusimos donde casi nadie se atreve: proteína alta, calorías contenidas, sin azúcares añadidos y sin edulcorantes artificiales. Sin trucos ni letra pequeña, y con un sabor que no pide perdón.",
-      "Pero la idea de fondo no era solo 'hacer una barrita buena'. Era crear un snack que de verdad te apetezca comprar y repetir: algo sano que puedas tomar cada día y que además sume nutricionalmente. No la típica barrita de proteína del súper que te comes pensando 'bueno, no está mal', pero que no es para el día a día.",
-      "¿La parte que da yuyu? Usamos harina de grillo. No para provocar, sino porque cuando la miras con datos y sin prejuicios tiene mucho sentido: es una de las fuentes de proteína de menor impacto ambiental (FAO), con aminoácidos y micronutrientes de forma natural.",
+      "Nos parecía absurdo tener que renunciar a una cosa para tener la otra: o comes rico, o comes bien. Así que nos pusimos donde casi nadie se atreve: **proteína alta, calorías contenidas, sin azúcares añadidos y sin edulcorantes artificiales**. Sin trucos ni letra pequeña, y con un sabor que no pide perdón.",
+      "Pero la idea de fondo no era solo 'hacer una barrita buena'. Era crear ==un snack que de verdad te apetezca comprar y repetir==: algo sano que puedas tomar cada día y que además sume nutricionalmente. No la típica barrita de proteína del súper que te comes pensando 'bueno, no está mal', pero que no es para el día a día.",
+      "¿La parte que da yuyu? Usamos **harina de grillo**. No para provocar, sino porque cuando la miras con datos y sin prejuicios tiene mucho sentido: es ==una de las fuentes de proteína de menor impacto ambiental (FAO)==, con aminoácidos y micronutrientes de forma natural.",
       "Y no la vas a notar. El sabor viene del cacao real, los dátiles y el resto de ingredientes de verdad. La proteína de grillo hace su trabajo en silencio: toda la nutrición, sin el experimento de laboratorio.",
     ],
   },
@@ -556,15 +556,15 @@ export const about = {
     title: "Quién está detrás",
     paragraphs: [
       "AnyBug es un proyecto independiente con base en Granada, impulsado por Sara. Detrás no hay un gran departamento de marketing: hay una persona curiosa por naturaleza, de las que necesitan entender el porqué de las cosas y no se conforman con la primera respuesta.",
-      "Con los años, esa curiosidad se convirtió en una pasión real por la nutrición y el deporte, y por cómo cuidarse de verdad puede cambiarte la vida por dentro y por fuera. Aprender a comer bien, sin obsesiones ni extremos y disfrutando por el camino, fue una de las cosas que más la ayudó a encontrar su equilibrio.",
+      "Con los años, esa curiosidad se convirtió en ==una pasión real por la nutrición y el deporte==, y por cómo cuidarse de verdad puede cambiarte la vida por dentro y por fuera. Aprender a comer bien, sin obsesiones ni extremos y disfrutando por el camino, fue una de las cosas que más la ayudó a encontrar su equilibrio.",
       "De ahí nace AnyBug: de las ganas de que comer bien cada día sea fácil y apetecible. No buscaba 'una barrita más', sino un snack que de verdad te apetezca comprar y repetir, algo sano que puedas tomar a diario y que además sume. Nada que ver con la típica barrita de proteína del súper que está 'bueno, no está mal', pero que no es para todos los días.",
     ],
   },
   making: {
     title: "Cómo se fabrica",
     paragraphs: [
-      "Producimos en España, en las instalaciones de SANAVI (Láchar, Granada), un fabricante con registro sanitario que nos permite cuidar cada lote con estándares de seguridad alimentaria.",
-      "La harina de grillo (Acheta domesticus) está autorizada en la Unión Europea como nuevo alimento. Trabajamos con ingredientes reales y una lista corta: nada de rellenos innecesarios.",
+      "Producimos en España, en las instalaciones de **SANAVI (Láchar, Granada)**, un fabricante con registro sanitario que nos permite cuidar cada lote con estándares de seguridad alimentaria.",
+      "La [harina de grillo](/blog/por-que-proteina-de-grillo) (Acheta domesticus) está **autorizada en la Unión Europea como nuevo alimento**. Trabajamos con ingredientes reales y una lista corta: nada de rellenos innecesarios.",
     ],
   },
   stats: [
