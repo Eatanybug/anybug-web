@@ -61,14 +61,15 @@ export default function NosotrosPage() {
             <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
               {about.founder.title}
             </h2>
-            <div className="ai-veil relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+            <div className="ai-veil relative aspect-[4/5] w-full max-w-[240px] overflow-hidden rounded-2xl">
               <Image
                 src="/lifestyle/anybug-founder-gym.png"
                 alt="Fundadora de AnyBug con una barrita en el gimnasio"
                 fill
-                className="scale-105 object-cover blur-[3px]"
-                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover"
+                sizes="240px"
               />
+              <div className="pointer-events-none absolute inset-0 z-[3] bg-cream/45" />
             </div>
           </div>
           <div className="flex flex-col gap-4">
