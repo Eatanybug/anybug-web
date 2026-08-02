@@ -616,7 +616,7 @@ export const blog = {
       excerpt:
         "No toda la proteína pesa lo mismo en el planeta. Comparamos el grillo con la proteína animal, sin inventarnos las cifras.",
       date: "2026-06-18",
-      cover: "/products/crush-lifestyle.jpeg",
+      cover: "/blog/blog-impacto.png",
       body: [
         "Cuando hablamos de proteína solemos mirar solo la etiqueta nutricional, pero cada gramo que producimos tiene también una etiqueta ambiental: agua, tierra y emisiones. Y ahí es donde las diferencias entre fuentes se vuelven enormes. Producir proteína de origen animal, especialmente de vacuno, exige recursos que muchas veces damos por descontados.",
         "Según la FAO, la cría de grillo utiliza mucha menos agua, requiere menos pienso para producir la misma cantidad de proteína y genera menos emisiones que la proteína bovina. No vamos a soltarte un porcentaje redondo que quede bonito en un cartel: preferimos decirte lo que de verdad sostiene la evidencia, que es una comparación cualitativa clara y a favor del insecto en las tres variables.",
@@ -631,7 +631,7 @@ export const blog = {
       excerpt:
         "Todos cuentan proteína, casi nadie mira los micronutrientes. Y ahí es donde un snack se vuelve interesante de verdad.",
       date: "2026-05-20",
-      cover: "/products/crush-mood.jpeg",
+      cover: "/blog/blog-micronutrientes.png",
       body: [
         "La conversación sobre snacks proteicos suele empezar y terminar en una sola cifra: los gramos de proteína. Es una lástima, porque lo que muchas veces marca la diferencia real en tu día no son esos gramos, sino los micronutrientes que acompañan a la comida. El hierro, el zinc y la vitamina B12 son tres de los que más solemos descuidar.",
         "El hierro es clave para transportar oxígeno en la sangre y para no arrastrarte por la tarde; el zinc participa en el sistema inmunitario y en un montón de procesos metabólicos; y la B12 es fundamental para el sistema nervioso y para formar glóbulos rojos. El detalle interesante es que la B12 es difícil de obtener de fuentes vegetales, y el grillo la aporta de forma natural, igual que aporta hierro de manera notable.",
@@ -646,7 +646,7 @@ export const blog = {
       excerpt:
         "Todo el mundo habla de proteína y nadie de fibra. Y en una barrita, la fibra es la diferencia entre un snack y un caramelo.",
       date: "2026-04-12",
-      cover: "/products/crush-board.jpeg",
+      cover: "/blog/blog-fibra.png",
       body: [
         "Si miras el pasillo de las barritas proteicas, verás la palabra proteína repetida hasta el aburrimiento. Lo que casi nunca verás destacado es la fibra, y es un olvido curioso, porque la fibra es precisamente lo que separa a un snack que alimenta de uno que solo llena un hueco durante diez minutos.",
         "La fibra ayuda a que la digestión sea más pausada, contribuye a la sensación de saciedad y alimenta a la microbiota intestinal, esas bacterias que cada vez más estudios relacionan con nuestro bienestar general. Una barrita alta en proteína pero sin fibra te deja con hambre otra vez enseguida; una con fibra de verdad acompaña mucho mejor.",
@@ -661,7 +661,7 @@ export const blog = {
       excerpt:
         "No toda la proteína es igual de aprovechable. Te explicamos qué es una proteína completa y por qué el grillo juega en esa liga.",
       date: "2026-03-08",
-      cover: "/products/crush-bars.jpeg",
+      cover: "/blog/blog-aminoacidos.png",
       body: [
         "Decir que un alimento tiene muchos gramos de proteína cuenta solo la mitad de la historia. La otra mitad es la calidad de esa proteína, y ahí entra un concepto que conviene entender: los aminoácidos esenciales. Son los ladrillos con los que tu cuerpo construye músculo, enzimas y defensas, y se llaman esenciales porque tu organismo no los fabrica y tienen que venir de la comida.",
         "Una proteína se considera completa cuando aporta todos los aminoácidos esenciales en proporciones adecuadas. Muchas proteínas de origen vegetal son, por sí solas, incompletas: les falta o les escasea alguno. Un caso clásico es la lisina, un aminoácido que a varias fuentes vegetales les cuesta ofrecer en cantidad suficiente.",
@@ -676,7 +676,7 @@ export const blog = {
       excerpt:
         "Maltitol, jarabes y 'sin azúcar añadido' que no lo es. Aprende a distinguir el marketing de la comida.",
       date: "2026-02-02",
-      cover: "/products/crush-bar.png",
+      cover: "/blog/blog-etiqueta.png",
       body: [
         "La parte de delante de un envase es publicidad; la de detrás es la verdad. Si quieres saber qué estás comiendo de verdad, dale la vuelta a la barrita y lee la lista de ingredientes y la información nutricional. Con dos o tres reglas sencillas dejarás de tragarte medio marketing del pasillo.",
         "Primer truco: el orden de los ingredientes no es casual. Se listan de mayor a menor cantidad, así que si lo primero que aparece es un jarabe, un azúcar o un aceite refinado, ya sabes de qué está hecho el grueso del producto por mucho que la parte delantera grite proteína. Fíjate también en la longitud de la lista: cuanto más corta y reconocible, mejor suele ser la señal.",
@@ -692,7 +692,7 @@ export const blog = {
       excerpt:
         "Menos agua, menos emisiones y un perfil de aminoácidos completo. Te contamos los datos sin postureo.",
       date: "2026-01-15",
-      cover: "/products/crush.png",
+      cover: "/blog/blog-grillo.png",
       body: [
         "Sí, lo primero que piensas es en la cara rara. Lo entendemos. Pero antes de descartarlo, deja que te contemos por qué la proteína de grillo tiene mucho más sentido de lo que parece, y por qué en gran parte del mundo comer insectos es de lo más normal. El bicho raro, si acaso, es el prejuicio.",
         "Empecemos por el planeta. Según la FAO, la cría de grillo utiliza mucha menos agua, requiere menos pienso y genera menos emisiones que la proteína de vacuno. Es un animal pequeño y muy eficiente convirtiendo lo que come en proteína aprovechable, así que su huella ambiental es sensiblemente menor sin que tengamos que inflar la cifra para impresionarte.",

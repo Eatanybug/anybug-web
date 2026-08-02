@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { about } from "@/lib/content";
 import { CtaButton } from "@/components/ui/CtaButton";
+import { LifestyleBand } from "@/components/sections/LifestyleBand";
 
 export const metadata: Metadata = {
   title: "Nosotros",
@@ -28,9 +30,20 @@ export default function NosotrosPage() {
       {/* Historia */}
       <section className="section bg-white">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-            {about.story.title}
-          </h2>
+          <div className="flex flex-col gap-6">
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+              {about.story.title}
+            </h2>
+            <div className="ai-veil relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/lifestyle/lifestyle-tote.png"
+                alt="Barrita AnyBug en un tote bag de pádel"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </div>
+          </div>
           <div className="flex flex-col gap-4">
             {about.story.paragraphs.map((p, i) => (
               <p key={i} className="text-base leading-relaxed text-neutral-600">
@@ -44,9 +57,20 @@ export default function NosotrosPage() {
       {/* Quién está detrás */}
       <section className="section bg-cream">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-            {about.founder.title}
-          </h2>
+          <div className="flex flex-col gap-6">
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+              {about.founder.title}
+            </h2>
+            <div className="ai-veil relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/lifestyle/anybug-founder-gym.png"
+                alt="Fundadora de AnyBug con una barrita en el gimnasio"
+                fill
+                className="scale-105 object-cover blur-[3px]"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </div>
+          </div>
           <div className="flex flex-col gap-4">
             {about.founder.paragraphs.map((p, i) => (
               <p key={i} className="text-base leading-relaxed text-neutral-600">
@@ -60,9 +84,20 @@ export default function NosotrosPage() {
       {/* Cómo se fabrica */}
       <section className="section bg-white">
         <div className="container-page grid gap-10 lg:grid-cols-[1fr_1.2fr]">
-          <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
-            {about.making.title}
-          </h2>
+          <div className="flex flex-col gap-6">
+            <h2 className="font-serif text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+              {about.making.title}
+            </h2>
+            <div className="ai-veil relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
+              <Image
+                src="/lifestyle/lifestyle-bag.png"
+                alt="Barrita AnyBug en un tote con pelotas de pádel"
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 40vw, 100vw"
+              />
+            </div>
+          </div>
           <div className="flex flex-col gap-4">
             {about.making.paragraphs.map((p, i) => (
               <p key={i} className="text-base leading-relaxed text-neutral-600">
@@ -111,6 +146,12 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
+
+      {/* Lifestyle band */}
+      <LifestyleBand
+        src="/lifestyle/lifestyle-plate.png"
+        alt="Barrita AnyBug servida en un plato"
+      />
 
       {/* CTA */}
       <section className="bg-black text-white">
