@@ -18,7 +18,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
-    }, 4500);
+    }, 2800);
     return () => clearInterval(id);
   }, [slides.length]);
 
@@ -28,7 +28,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
         <div
           key={slide.src}
           aria-hidden={i !== index}
-          className={`absolute inset-0 transition-opacity duration-[1200ms] ease-in-out ${
+          className={`absolute inset-0 transition-opacity duration-700 ease-in-out ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -38,7 +38,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
             fill
             priority={i === 0}
             sizes="100vw"
-            className="scale-110 object-cover blur-md brightness-105"
+            className="scale-[1.03] object-cover blur-[2px] brightness-105"
           />
         </div>
       ))}

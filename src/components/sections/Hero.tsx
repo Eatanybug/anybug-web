@@ -3,11 +3,13 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
-  { src: "/lifestyle/anybug-lifestyle-gym.png", alt: "Manos con vendas de boxeo sujetando una barrita AnyBug" },
-  { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
-  { src: "/hero/hero.png", alt: "Barrita AnyBug Brownie & Dates" },
-  { src: "/lifestyle/anybug-boxing-girl-1.png", alt: "Boxeadora sujetando una barrita AnyBug" },
+  { src: "/lifestyle/adv-trailrun.png", alt: "Corredora de montaña al atardecer" },
   { src: "/lifestyle/anybug-lifestyle-dunes.png", alt: "Barrita AnyBug sostenida al aire libre en las dunas" },
+  { src: "/lifestyle/adv-cycling.png", alt: "Ciclista en una carretera costera al atardecer" },
+  { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
+  { src: "/lifestyle/adv-hike.png", alt: "Excursionista en la cima de una montaña al amanecer" },
+  { src: "/lifestyle/anybug-lifestyle-gym.png", alt: "Manos con vendas de boxeo sujetando una barrita AnyBug" },
+  { src: "/lifestyle/adv-surf.png", alt: "Surfista caminando por la playa al atardecer" },
 ];
 
 export function Hero() {
