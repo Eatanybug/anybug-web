@@ -153,8 +153,11 @@ export default function NosotrosPage() {
 
       {/* Lifestyle band */}
       <LifestyleBand
-        src="/lifestyle/lifestyle-plate.png"
-        alt="Barrita AnyBug servida en un plato"
+        src="/lifestyle/gym-stack.png"
+        alt="Barrita AnyBug apilada en un banco de gimnasio"
+        caption="Comida real que aguanta el ritmo. Dentro y fuera del gym."
+        imgClassName="scale-105 blur-[3px]"
+        objectPosition="center 60%"
       />
 
       {/* CTA */}
