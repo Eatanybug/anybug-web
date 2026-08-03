@@ -549,15 +549,15 @@ export const about = {
       "Nos parecía absurdo tener que renunciar a una cosa para tener la otra: o comes rico, o comes bien. Así que nos pusimos donde casi nadie se atreve: **proteína alta, calorías contenidas, sin azúcares añadidos y sin edulcorantes artificiales**. Sin trucos ni letra pequeña, y con un sabor que no pide perdón.",
       "Pero la idea de fondo no era solo 'hacer una barrita buena'. Era crear ==un snack que de verdad te apetezca comprar y repetir==: algo sano que puedas tomar cada día y que además sume nutricionalmente. No la típica barrita de proteína del súper que te comes pensando 'bueno, no está mal', pero que no es para el día a día.",
       "¿La parte que da yuyu? Usamos **harina de grillo**. No para provocar, sino porque cuando la miras con datos y sin prejuicios tiene mucho sentido: es ==una de las fuentes de proteína de menor impacto ambiental (FAO)==, con aminoácidos y micronutrientes de forma natural.",
-      "Y no la vas a notar. El sabor viene del cacao real, los dátiles y el resto de ingredientes de verdad. La proteína de grillo hace su trabajo en silencio: toda la nutrición, sin el experimento de laboratorio.",
+      "Y no la vas a notar. El sabor viene del cacao real, los dátiles y los demás ingredientes de la lista. La proteína de grillo hace su trabajo en silencio: toda la nutrición, sin el experimento de laboratorio.",
     ],
   },
   founder: {
     title: "Quién está detrás",
     paragraphs: [
       "AnyBug es un proyecto independiente con base en Granada, impulsado por Sara. Detrás no hay un gran departamento de marketing: hay una persona curiosa por naturaleza, de las que necesitan entender el porqué de las cosas y no se conforman con la primera respuesta.",
-      "Con los años, esa curiosidad se convirtió en ==una pasión real por la nutrición y el deporte==, y por cómo cuidarse de verdad puede cambiarte la vida por dentro y por fuera. Aprender a comer bien, sin obsesiones ni extremos y disfrutando por el camino, fue una de las cosas que más la ayudó a encontrar su equilibrio.",
-      "De ahí nace AnyBug: de las ganas de que cuidarse cada día sea fácil y apetecible, sin renunciar al placer de comer. Un proyecto hecho con obsesión por los detalles y con la ilusión de compartir lo que a ella misma le habría gustado encontrar en cualquier estantería.",
+      "Con los años, esa curiosidad se convirtió en ==una pasión real por la nutrición y el deporte==, y por cómo cuidarse puede cambiarte la vida por dentro y por fuera. Aprender a comer bien, sin obsesiones ni extremos y disfrutando por el camino, fue una de las cosas que más la ayudó a encontrar su equilibrio.",
+      "De ahí nace AnyBug: de las ganas de que cuidarse cada día sea fácil y apetecible, sin renunciar al placer de comer. Un proyecto cuidado al detalle y con la ilusión de compartir lo que a ella misma le habría gustado encontrar en cualquier estantería.",
     ],
   },
   making: {
