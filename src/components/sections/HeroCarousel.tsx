@@ -18,7 +18,7 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length);
-    }, 2800);
+    }, 2000);
     return () => clearInterval(id);
   }, [slides.length]);
 
@@ -43,10 +43,10 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
         </div>
       ))}
 
-      {/* Velo difuminado + degradados para legibilidad del texto */}
-      <div className="absolute inset-0 bg-white/30" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/85 via-white/45 to-white/20" />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/35 to-transparent" />
+      {/* Velo ligero + degradados: deja ver el color y mantiene legible el texto */}
+      <div className="absolute inset-0 bg-white/12" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-white/15" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/30 to-transparent" />
     </div>
   );
 }

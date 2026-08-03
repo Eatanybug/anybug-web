@@ -4,11 +4,14 @@ import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
   { src: "/lifestyle/adv-trailrun.png", alt: "Corredora de montaña al atardecer" },
-  { src: "/lifestyle/anybug-lifestyle-dunes.png", alt: "Barrita AnyBug sostenida al aire libre en las dunas" },
+  { src: "/lifestyle/aes-stilllife.png", alt: "Barrita AnyBug con dátiles y cacao" },
   { src: "/lifestyle/adv-cycling.png", alt: "Ciclista en una carretera costera al atardecer" },
   { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
+  { src: "/lifestyle/aes-padel.png", alt: "Jugadora de pádel al atardecer" },
+  { src: "/lifestyle/anybug-lifestyle-dunes.png", alt: "Barrita AnyBug sostenida al aire libre en las dunas" },
   { src: "/lifestyle/adv-hike.png", alt: "Excursionista en la cima de una montaña al amanecer" },
   { src: "/lifestyle/anybug-lifestyle-gym.png", alt: "Manos con vendas de boxeo sujetando una barrita AnyBug" },
+  { src: "/lifestyle/aes-yoga.png", alt: "Mujer haciendo yoga junto al mar al amanecer" },
   { src: "/lifestyle/adv-surf.png", alt: "Surfista caminando por la playa al atardecer" },
 ];
 
