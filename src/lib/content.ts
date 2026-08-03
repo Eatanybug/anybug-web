@@ -557,7 +557,7 @@ export const about = {
     paragraphs: [
       "AnyBug es un proyecto independiente con base en Granada, impulsado por Sara. Detrás no hay un gran departamento de marketing: hay una persona curiosa por naturaleza, de las que necesitan entender el porqué de las cosas y no se conforman con la primera respuesta.",
       "Con los años, esa curiosidad se convirtió en ==una pasión real por la nutrición y el deporte==, y por cómo cuidarse de verdad puede cambiarte la vida por dentro y por fuera. Aprender a comer bien, sin obsesiones ni extremos y disfrutando por el camino, fue una de las cosas que más la ayudó a encontrar su equilibrio.",
-      "De ahí nace AnyBug: de las ganas de que comer bien cada día sea fácil y apetecible. No buscaba 'una barrita más', sino un snack que de verdad te apetezca comprar y repetir, algo sano que puedas tomar a diario y que además sume. Nada que ver con la típica barrita de proteína del súper que está 'bueno, no está mal', pero que no es para todos los días.",
+      "De ahí nace AnyBug: de las ganas de que cuidarse cada día sea fácil y apetecible, sin renunciar al placer de comer. Un proyecto hecho con obsesión por los detalles y con la ilusión de compartir lo que a ella misma le habría gustado encontrar en cualquier estantería.",
     ],
   },
   making: {
