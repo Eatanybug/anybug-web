@@ -1,34 +1,20 @@
-import fs from "node:fs";
-import path from "node:path";
 import { hero } from "@/lib/content";
 import { CtaButton } from "@/components/ui/CtaButton";
+import { HeroCarousel } from "@/components/sections/HeroCarousel";
+
+const heroSlides = [
+  { src: "/lifestyle/anybug-lifestyle-gym.png", alt: "Manos con vendas de boxeo sujetando una barrita AnyBug" },
+  { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
+  { src: "/hero/hero.png", alt: "Barrita AnyBug Brownie & Dates" },
+  { src: "/lifestyle/anybug-boxing-girl-1.png", alt: "Boxeadora sujetando una barrita AnyBug" },
+  { src: "/lifestyle/anybug-lifestyle-dunes.png", alt: "Barrita AnyBug sostenida al aire libre en las dunas" },
+];
 
 export function Hero() {
-  const hasVideo = fs.existsSync(path.join(process.cwd(), "public", hero.video));
   return (
-    <section className="relative flex min-h-[92vh] flex-col overflow-hidden bg-neutral-200 md:min-h-[88vh]">
-      {/* Background: image (always visible) + video overlay when present + slow zoom */}
-      <div className="absolute inset-0 z-0">
-        <div
-          className="hero-media absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${hero.poster})` }}
-        />
-        {/* Drop your file at public/hero/hero.mp4 to show a real background video */}
-        {hasVideo && (
-          <video
-            className="hero-media absolute inset-0 h-full w-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-          >
-            <source src={hero.video} type="video/mp4" />
-          </video>
-        )}
-        {/* Scrims for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/60 to-white/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/25 to-transparent" />
-      </div>
+    <section className="relative flex min-h-[72vh] flex-col overflow-hidden bg-neutral-200 md:min-h-[68vh]">
+      {/* Fondo: carrusel de imágenes (deporte + producto) con velo difuminado */}
+      <HeroCarousel slides={heroSlides} />
 
       <div className="container-page relative z-10 flex w-full flex-1 flex-col justify-between gap-5 pb-8 pt-6 sm:pb-10 sm:pt-10 md:pb-14 md:pt-14">
         {/* Top corner: slogan only */}
