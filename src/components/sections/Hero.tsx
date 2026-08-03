@@ -4,7 +4,6 @@ import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
   { src: "/lifestyle/adv-trailrun.png", alt: "Corredora de montaña al atardecer" },
-  { src: "/lifestyle/aes-stilllife.png", alt: "Barrita AnyBug con dátiles y cacao" },
   { src: "/lifestyle/adv-cycling.png", alt: "Ciclista en una carretera costera al atardecer" },
   { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
   { src: "/lifestyle/aes-padel.png", alt: "Jugadora de pádel al atardecer" },
