@@ -70,15 +70,14 @@ export default function NosotrosPage() {
               ))}
             </div>
             <div className="order-1 flex justify-center lg:order-2 lg:justify-end">
-              <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
+              <div className="relative aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl">
                 <Image
-                  src="/lifestyle/anybug-founder-gym.png"
-                  alt="Fundadora de AnyBug con una barrita en el gimnasio"
+                  src="/lifestyle/anybug-founder-mat.png"
+                  alt="Fundadora de AnyBug en el gimnasio"
                   fill
                   className="object-cover"
                   sizes="280px"
                 />
-                <div className="pointer-events-none absolute inset-0 z-[3] bg-cream/45" />
               </div>
             </div>
           </div>
