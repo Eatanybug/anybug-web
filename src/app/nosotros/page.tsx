@@ -37,8 +37,8 @@ export default function NosotrosPage() {
             </h2>
             <div className="ai-veil relative aspect-[4/5] w-full max-w-[280px] mx-auto lg:mx-0 overflow-hidden rounded-2xl">
               <Image
-                src="/lifestyle/anybug-plate-dinner.png"
-                alt="Barrita AnyBug servida en un plato, cortándola con cuchillo y tenedor"
+                src="/lifestyle/aes-run-asphalt.png"
+                alt="Barrita AnyBug en el suelo tras salir a correr, con café y agua"
                 fill
                 className="object-cover"
                 sizes="280px"
