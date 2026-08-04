@@ -3,12 +3,7 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
-  { src: "/hero/hero-cream.png", alt: "Barrita AnyBug Brownie & Dates sobre fondo crema" },
-  { src: "/lifestyle/aes-run-hand.png", alt: "Barrita AnyBug en la mano tras salir a correr" },
-  { src: "/hero/hero-yellow.png", alt: "Barrita AnyBug con dátiles y cacao sobre fondo amarillo" },
-  { src: "/lifestyle/anybug-grass-run-wide.png", alt: "Deportista sobre el césped con una barrita AnyBug en la mano" },
-  { src: "/hero/hero-dark.png", alt: "Mano ofreciendo una barrita AnyBug sobre fondo oscuro" },
-  { src: "/lifestyle/aes-run-curb.png", alt: "Descanso post-carrera con una barrita AnyBug" },
+  { src: "/hero/hero-hand-wide.png", alt: "Mano sujetando una barrita AnyBug Brownie & Dates tras salir a correr" },
 ];
 
 export function Hero() {
