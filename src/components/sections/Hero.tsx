@@ -3,16 +3,12 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
-  { src: "/lifestyle/adv-trailrun.png", alt: "Corredora de montaña al atardecer" },
+  { src: "/hero/hero-cream.png", alt: "Barrita AnyBug Brownie & Dates sobre fondo crema" },
+  { src: "/lifestyle/aes-run-hand.png", alt: "Barrita AnyBug en la mano tras salir a correr" },
+  { src: "/hero/hero-yellow.png", alt: "Barrita AnyBug con dátiles y cacao sobre fondo amarillo" },
   { src: "/lifestyle/anybug-grass-run-wide.png", alt: "Deportista sobre el césped con una barrita AnyBug en la mano" },
-  { src: "/lifestyle/adv-cycling.png", alt: "Ciclista en una carretera costera al atardecer" },
-  { src: "/lifestyle/anybug-sport-natural-1.png", alt: "Deportista con una barrita AnyBug tras entrenar" },
-  { src: "/lifestyle/aes-padel.png", alt: "Jugadora de pádel al atardecer" },
-  { src: "/lifestyle/anybug-lifestyle-dunes.png", alt: "Barrita AnyBug sostenida al aire libre en las dunas" },
-  { src: "/lifestyle/adv-hike.png", alt: "Excursionista en la cima de una montaña al amanecer" },
-  { src: "/lifestyle/anybug-lifestyle-gym.png", alt: "Manos con vendas de boxeo sujetando una barrita AnyBug" },
-  { src: "/lifestyle/aes-yoga.png", alt: "Mujer haciendo yoga junto al mar al amanecer" },
-  { src: "/lifestyle/adv-surf.png", alt: "Surfista caminando por la playa al atardecer" },
+  { src: "/hero/hero-dark.png", alt: "Mano ofreciendo una barrita AnyBug sobre fondo oscuro" },
+  { src: "/lifestyle/aes-run-curb.png", alt: "Descanso post-carrera con una barrita AnyBug" },
 ];
 
 export function Hero() {
@@ -24,7 +20,7 @@ export function Hero() {
       <div className="container-page relative z-10 flex w-full flex-1 flex-col justify-between gap-5 pb-8 pt-6 sm:pb-10 sm:pt-10 md:pb-14 md:pt-14">
         {/* Top corner: slogan only */}
         <div className="hero-enter">
-          <h1 className="font-serif text-4xl font-normal uppercase leading-[0.98] tracking-tight text-neutral-900 sm:text-5xl lg:text-7xl">
+          <h1 className="font-serif text-4xl font-normal uppercase leading-[0.98] tracking-tight text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.55)] sm:text-5xl lg:text-7xl">
             {hero.display}
           </h1>
         </div>
@@ -32,12 +28,12 @@ export function Hero() {
         {/* Bottom: text lines above the card, then the card */}
         <div className="hero-enter mt-auto flex w-full max-w-xl flex-col items-start gap-4 sm:max-w-2xl">
           {/* Text lines (outside the box, just above it) */}
-          <div className="flex flex-col gap-2.5 [text-shadow:0_1px_12px_rgba(255,255,255,0.85)]">
-            <p className="max-w-xl font-serif text-lg font-normal leading-snug text-neutral-900 sm:text-xl">
+          <div className="flex flex-col gap-2.5 [text-shadow:0_1px_16px_rgba(0,0,0,0.6)]">
+            <p className="max-w-xl font-serif text-lg font-normal leading-snug text-white/90 sm:text-xl">
               {hero.eyebrow}
             </p>
 
-            <p className="font-serif text-xl font-bold leading-snug text-neutral-900 sm:text-2xl">
+            <p className="font-serif text-xl font-bold leading-snug text-white sm:text-2xl">
               {hero.title}
             </p>
           </div>

@@ -38,15 +38,15 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
             fill
             priority={i === 0}
             sizes="100vw"
-            className="scale-[1.03] object-cover blur-[2px] brightness-105"
+            className="scale-[1.03] object-cover"
           />
         </div>
       ))}
 
-      {/* Velo ligero + degradados: deja ver el color y mantiene legible el texto */}
-      <div className="absolute inset-0 bg-white/12" />
-      <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-white/25 to-white/15" />
-      <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/30 to-transparent" />
+      {/* Degradado oscuro solo a la izquierda/abajo: producto nítido a la derecha
+          y texto blanco legible en cualquier fondo (claro u oscuro) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/20" />
     </div>
   );
 }
