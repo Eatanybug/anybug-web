@@ -20,8 +20,8 @@ export const site = {
 export const hero = {
   // Titular grande (estilo serif, como en la web actual)
   display: "Simply, better",
-  eyebrow: "Una de las fuentes de proteína de menor impacto ambiental según la FAO",
-  title: "Productos altos en proteína, naturalmente",
+  eyebrow: "Sí, lleva grillo. Y está más buena que tu barrita de siempre.",
+  title: "Proteína del futuro, sabor de toda la vida.",
   badges: [
     "Sin edulcorantes artificiales",
     "Sin azúcares añadidos",
