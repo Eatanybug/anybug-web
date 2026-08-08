@@ -21,9 +21,10 @@ export default async function Home() {
       <Better />
       <HowItsMade />
       <LifestyleBand
-        src="/lifestyle/lifestyle-court.png"
-        alt="Chica sentada en la pista abriendo una barrita AnyBug"
+        src="/lifestyle/aes-bag-lilac.png"
+        alt="Mano guardando una barrita AnyBug en una bolsa de deporte lila"
         caption="Proteína real, para tu día real."
+        objectPosition="center 42%"
       />
       <Products items={displayProducts} />
       <NutritionStats />
