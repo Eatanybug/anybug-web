@@ -3,7 +3,11 @@ import { CtaButton } from "@/components/ui/CtaButton";
 import { HeroCarousel } from "@/components/sections/HeroCarousel";
 
 const heroSlides = [
-  { src: "/hero/hero-hand-wide.png", alt: "Mano sujetando una barrita AnyBug Brownie & Dates tras salir a correr" },
+  {
+    src: "/hero/hero-hand-wide.png",
+    mobileSrc: "/lifestyle/aes-run-hand.png",
+    alt: "Mano sujetando una barrita AnyBug Brownie & Dates tras salir a correr",
+  },
 ];
 
 export function Hero() {

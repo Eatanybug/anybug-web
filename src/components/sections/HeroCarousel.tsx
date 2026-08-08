@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-type Slide = { src: string; alt: string };
+type Slide = { src: string; alt: string; mobileSrc?: string };
 
 /**
  * Carrusel de fondo del hero: cruza suavemente entre imágenes de deporte
@@ -32,14 +32,37 @@ export function HeroCarousel({ slides }: { slides: Slide[] }) {
             i === index ? "opacity-100" : "opacity-0"
           }`}
         >
-          <Image
-            src={slide.src}
-            alt={slide.alt}
-            fill
-            priority={i === 0}
-            sizes="100vw"
-            className="scale-[1.03] object-cover"
-          />
+          {slide.mobileSrc ? (
+            <>
+              {/* Versión vertical para móvil (mejor encuadre del producto) */}
+              <Image
+                src={slide.mobileSrc}
+                alt={slide.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className="scale-[1.03] object-cover object-center sm:hidden"
+              />
+              {/* Versión horizontal para escritorio */}
+              <Image
+                src={slide.src}
+                alt={slide.alt}
+                fill
+                priority={i === 0}
+                sizes="100vw"
+                className="hidden scale-[1.03] object-cover sm:block"
+              />
+            </>
+          ) : (
+            <Image
+              src={slide.src}
+              alt={slide.alt}
+              fill
+              priority={i === 0}
+              sizes="100vw"
+              className="scale-[1.03] object-cover"
+            />
+          )}
         </div>
       ))}
 
