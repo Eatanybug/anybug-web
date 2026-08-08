@@ -26,6 +26,8 @@ export default async function Home() {
         alt="Mano guardando una barrita AnyBug en una bolsa de deporte lila"
         caption="Proteína real, para tu día real."
         objectPosition="center 55%"
+        veil={false}
+        overlayClassName="bg-gradient-to-t from-black/45 via-black/5 to-transparent"
       />
       <Products items={displayProducts} />
       <NutritionStats />
