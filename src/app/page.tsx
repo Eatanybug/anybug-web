@@ -21,10 +21,11 @@ export default async function Home() {
       <Better />
       <HowItsMade />
       <LifestyleBand
-        src="/lifestyle/aes-bag-lilac.png"
+        src="/lifestyle/aes-bag-lilac-wide.png"
+        mobileSrc="/lifestyle/aes-bag-lilac.png"
         alt="Mano guardando una barrita AnyBug en una bolsa de deporte lila"
         caption="Proteína real, para tu día real."
-        objectPosition="center 42%"
+        objectPosition="center 55%"
       />
       <Products items={displayProducts} />
       <NutritionStats />

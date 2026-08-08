@@ -6,6 +6,8 @@ type LifestyleBandProps = {
   caption?: string;
   imgClassName?: string;
   objectPosition?: string;
+  /** Imagen alternativa (vertical) para móvil; si no se indica, usa src. */
+  mobileSrc?: string;
 };
 
 export function LifestyleBand({
@@ -14,18 +16,39 @@ export function LifestyleBand({
   caption,
   imgClassName,
   objectPosition,
+  mobileSrc,
 }: LifestyleBandProps) {
   return (
     <section className="relative h-[60vh] min-h-[420px] max-h-[600px] w-full overflow-hidden">
       <div className="ai-veil absolute inset-0">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className={`object-cover ${imgClassName ?? ""}`}
-          style={objectPosition ? { objectPosition } : undefined}
-          sizes="100vw"
-        />
+        {mobileSrc ? (
+          <>
+            <Image
+              src={mobileSrc}
+              alt={alt}
+              fill
+              className={`object-cover object-center sm:hidden ${imgClassName ?? ""}`}
+              sizes="100vw"
+            />
+            <Image
+              src={src}
+              alt={alt}
+              fill
+              className={`hidden object-cover sm:block ${imgClassName ?? ""}`}
+              style={objectPosition ? { objectPosition } : undefined}
+              sizes="100vw"
+            />
+          </>
+        ) : (
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            className={`object-cover ${imgClassName ?? ""}`}
+            style={objectPosition ? { objectPosition } : undefined}
+            sizes="100vw"
+          />
+        )}
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-black/30" />
       {caption && (
